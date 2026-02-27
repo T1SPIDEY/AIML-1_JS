@@ -6,28 +6,59 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="./script.js"></script>
-    <script type="text/javascript">
-    var cords;
-    document.write("Staring loop"+"<br>");
-    for (var i=0;i<1000000000;i++){
-        cords = Math.random();
-    }
-    var fname = "aniket";
-    var lname = "kumar";    
 
-    const person = {
-        fname:"aniket",
-        lname:"kumar",
-        age:25
-    }
-    for(let x in person)
-    {
-        console.log("person details "+x+" : "+person[x]);
-    }
+    <p>click the following button to call the function</p>
+
+    <form >
+        <input type="button" onclick="sayHello('Zara',7)" value = "Say Hello">
+    </form>
+
+
+
+    <script type="text/javascript">
+      function sayHello(name,age){
+        document.write(name + " is " + age + " years old. ");
+      }
+
+      let res = mul(12,30);
+
+      function mul(x,y){
+        return x * y;
+      }
+
+      document.write(res);
+      var person = {
+        name: "John",
+        age: 30,
+        city: "New York",
+        isMarried: true,
+        aaddress: {
+            street: "123 Main St",
+            city: "New York",
+            state: "NY"
+        }
+        
+
+      };
+      console.log(person);
+      console.log(person.name);
+      console.log(person.aaddress.city);
+      console.log(person["age"]);
+      var person2 = new Object();
+      {
+        name: "Alice",
+        age: 25,
+        city: "Los Angeles",
+        isMarried: false,
+        aaddress: {
+            street: "456 Elm St",
+            city: "Los Angeles",
+            state: "CA"
+        }
+      };
+      console.log(person2);
+      console.log(person2.name);
+      console.log(person2.aaddress.city);
     </script>
-    
-   
-    
 </body>
 </html>
